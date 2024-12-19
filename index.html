@@ -89,7 +89,7 @@
 
             if (username === staticUsername && password === staticPassword) {
                 // 登录成功后跳转到新页面
-                window.location.href = "ourDaily.html";
+                window.location.href = "imagesLists.html";
             } else {
                 alert("用户名或密码错误");
             }
@@ -101,12 +101,10 @@
 		
 		            // 弹出问题弹窗
 		            const answer1 = prompt("问题1：你是昕昕？");
-		            const answer2 = prompt("问题2：陛下还记得老奴的名字嘛？");
-		            const answer3 = prompt("问题3：陛下还记得我们的第一次见面的时候嘛？");
 		
-		            if (answer1 === "是" && answer2 === "魏庆" && answer3 === "2024年2月29日") {
+		            if (answer1 === "是") {
 		                // 答案正确，自动填写用户名和密码并登录
-		              window.location.href = "imagesList.html";
+		              window.location.href = "ourDaily.html";
 		            } else {
 		                alert("big胆，竟敢冒充女王陛下");
 		            }
