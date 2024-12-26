@@ -56,6 +56,24 @@ p {
     font-weight: bold;
     color: #776e65;
 }
+#leaderboard {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: #bbada0;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#leaderboard h2 {
+    margin-top: 0;
+}
+
+#leaderboard-name, #leaderboard-score {
+    font-weight: bold;
+}
 
 #gameover {
     display: none;
