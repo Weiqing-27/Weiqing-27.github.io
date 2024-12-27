@@ -4,10 +4,10 @@ const app = express();
 
 // 配置MySQL数据库连接（根据你的数据库实际配置修改参数）
 const connection = mysql.createConnection({
-    host: 'your_host',
-    user: 'your_user',
-    password: 'your_password',
-    database: 'your_database'
+    host: 'localhost',
+    user: 'sa',
+    password: 'wq200108158714',
+    database: '社区服务数据库'
 });
 
 connection.connect((err) => {

@@ -61,6 +61,23 @@ function getBackgroundColor(value) {
         default: return '#cdc1b4';
     }
 }
+// 获取按钮元素
+const upButton = document.getElementById('upButton');
+const downButton = document.getElementById('downButton');
+const leftButton = document.getElementById('leftButton');
+const rightButton = document.getElementById('rightButton');
+
+// 添加事件监听器
+upButton.addEventListener('click', () => move('up'));
+downButton.addEventListener('click', () => move('down'));
+leftButton.addEventListener('click', () => move('left'));
+rightButton.addEventListener('click', () => move('right'));
+
+// 处理移动的函数
+function move(direction) {
+    // 这里添加你的移动逻辑
+    console.log(`Move ${direction}`);
+}
 
 function handleKeyPress(event) {
     switch (event.key) {

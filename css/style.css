@@ -87,3 +87,14 @@ p {
     padding: 20px;
     border-radius: 10px;
 }
+/* 默认情况下，按钮是隐藏的 */
+#controls {
+    display: none;
+}
+
+/* 在移动设备上显示按钮 */
+@media screen and (max-width: 768px) {
+    #controls {
+        display: block;
+    }
+}
