@@ -1,8 +1,11 @@
 <template>
-  <router-view />
+  <div>M</div>
 </template>
 
+<script>
+
+</script>
+
 <style>
-/* 全局样式 */
 
 </style>
