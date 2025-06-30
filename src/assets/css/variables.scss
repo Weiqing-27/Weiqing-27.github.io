@@ -1,0 +1,198 @@
+@import "style/tools/functions.scss";
+/*
+ 以下变量是默认值，如不需要修改可以不用给下面的变量重新赋值
+ */
+
+// 主色
+$primary: #ff9842;
+$primary-light: #f2b045;
+
+// 辅助色
+// 除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。
+$success: #00c07f;
+
+$warning: #f57e23;
+$warning-light: #f39538;
+
+$danger: #f84646;
+
+// 常规色
+$info: #8f939c;
+$black: #000000;
+$white: #ffffff;
+
+//渐变色
+$primary-to-light: linear-gradient(270deg, #feb24b 0%, #ff6442 100%);
+
+// 间距基础倍数
+$space-root: 2 !default;
+// 文字大小基础倍数
+$size-root: 2px !default;
+// 文字大小基础倍数
+$text-size-root: 2px !default;
+// 边框半径默认值
+$radius-root: 2px !default;
+$radius: () !default;
+
+// 边框半径断点
+$radius: map-deep-merge(
+  (
+    0: 0,
+    // TODO 当前版本暂时不支持 sm 属性
+    // 'sm': math.div($uni-radius-root, 2),
+    null: $radius-root,
+    "2": $radius-root * 2,
+    "3": $radius-root * 3,
+    "4": $radius-root * 4,
+    "5": $radius-root * 5,
+    "6": $radius-root * 6,
+    "7": $radius-root * 7,
+    "8": $radius-root * 8,
+    "9": $radius-root * 9,
+    "10": $radius-root * 10,
+    "circle": 50%,
+  ),
+  $radius
+);
+
+// vant组件库配置
+:root:root {
+  // Component Colors
+  --van-primary-color: #{$primary};
+  --van-success-color: #{$success};
+  --van-danger-color: #{$danger};
+  --van-warning-color: #{$warning};
+
+  // Padding
+  --van-padding-base: 8px;
+  --van-padding-xs: 16px;
+  --van-padding-sm: 24px;
+  --van-padding-md: 32px;
+  --van-padding-lg: 48px;
+  --van-padding-xl: 64px;
+
+  // Font
+  --van-font-size-xs: 20px;
+  --van-font-size-sm: 24px;
+  --van-font-size-md: 28px;
+  --van-font-size-lg: 32px;
+  --van-font-bold: 600;
+  --van-line-height-xs: 28px;
+  --van-line-height-sm: 36px;
+  --van-line-height-md: 40px;
+  --van-line-height-lg: 44px;
+
+  // Border
+  --van-border-width: 1px;
+  --van-radius-sm: 4px;
+  --van-radius-md: 8px;
+  --van-radius-lg: 18px;
+  --van-radius-max: 999px;
+
+  //Cell
+  --van-cell-group-inset-padding: 0 16px;
+
+  // Color Palette
+  --van-black: #000;
+  --van-white: #fff;
+  --van-gray-1: #f7f8fa;
+  --van-gray-2: #f2f3f5;
+  --van-gray-3: #ebedf0;
+  --van-gray-4: #dcdee0;
+  --van-gray-5: #c8c9cc;
+  --van-gray-6: #969799;
+  --van-gray-7: #646566;
+  --van-gray-8: #333333;
+  --van-red: #ee0a24;
+  --van-blue: #1989fa;
+  --van-orange: #ff976a;
+  --van-orange-dark: #ed6a0c;
+  --van-orange-light: #fffbe8;
+  --van-green: #07c160;
+
+  //Popup
+  --van-popup-round-radius: 20px;
+
+  //Picker
+  --van-picker-toolbar-height: 186px;
+  --van-picker-action-padding: 0 66px;
+
+  //IndexBar
+  --van-index-anchor-font-weight: normal;
+  --van-index-anchor-text-color: #666666;
+
+  //Radio
+  --van-radio-size: 32px;
+
+  //Checkbox
+  --van-checkbox-size: 32px;
+
+  //Tabs
+  --van-tabs-nav-background: transparent;
+  --van-tabs-line-height: 50px;
+
+  //Dialog
+  --van-dialog-radius: 10px;
+
+  //DropdownMenu
+  --van-dropdown-menu-height: 72px;
+  --van-dropdown-menu-title-font-size: 26px;
+  --van-dropdown-menu-title-text-color: #999999;
+  --van-dropdown-menu-title-active-text-color: #666666;
+  --van-dropdown-menu-shadow: 0;
+}
+
+//Cell
+.van-form .van-cell {
+  padding: 24px 40px;
+}
+
+//Field
+.van-field__control {
+  font-size: 28px;
+}
+
+//Radio
+.van-radio--horizontal {
+  margin-right: 0;
+  margin-left: var(--van-padding-sm);
+}
+
+//Button
+
+//Picker
+.van-picker__frame {
+  left: 66px;
+  right: 66px;
+}
+
+.van-hairline-unset--top-bottom:after {
+  border: 0 solid $primary;
+}
+
+.van-hairline--top-bottom:after,
+.van-hairline-unset--top-bottom:after {
+  border-width: 8px 0;
+}
+
+.van-picker {
+  background: url("@/assets/images/picker-bg.png") #ffffff;
+  background-size: 584px 175px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+//IndexBar
+.van-index-bar__index {
+  font-weight: normal;
+}
+
+.van-index-bar__index {
+  color: #cccccc;
+  font-size: 18px;
+  padding: 12px 16px;
+}
+
+.van-index-bar__index--active {
+  color: $primary;
+}

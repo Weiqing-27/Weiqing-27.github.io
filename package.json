@@ -16,6 +16,7 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "amfe-flexible": "^2.2.1",
     "postcss-pxtorem": "^6.1.0",
+    "sass": "^1.89.2",
     "unplugin-vue-components": "^0.27.5",
     "vant": "^4.9.20",
     "vite": "^7.0.0"
