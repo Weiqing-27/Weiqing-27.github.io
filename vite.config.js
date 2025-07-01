@@ -5,6 +5,7 @@ import { VantResolver } from 'unplugin-vue-components/resolvers'
 import path from 'path' // 引入 path 模块
 
 export default defineConfig({
+  base: '/Weiqing-27.github.io/', // 设置部署的基础路径
   css: {
     preprocessorOptions: {
       scss: {
