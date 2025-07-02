@@ -1,6 +1,6 @@
 <template>
   <div class="ma-24 gray-a">
-    <div class="shadow-box pa-10 flex justify-around align-center">
+    <div class="shadow-box pa-10 flex justify-between align-center">
       <div>
         <van-image
           round
@@ -12,15 +12,15 @@
         />
       </div>
       <div class="flex flex-direction">
-        <div class="">和昕昕在一起的</div>
-        <div><van-cell :value="formattedTime" /></div>
+        <div class="pb-10">和昕昕在一起的</div>
+        <div class="mt-10"><van-cell :value="formattedTime" /></div>
       </div>
     </div>
     <div v-for="(row, rowIndex) in imageGrid" :key="rowIndex" class="flex justify-between ">
       <div 
         v-for="(item, colIndex) in row" 
         :key="item.id"
-        class="pa-10 mt-10 mb-30 shadow-box1 h-100 radius-10 w-50 flex align-center flex-direction mr-10"
+        class="pa-10 mt-10 mb-30 shadow-box1 h-100 radius-10 w-50 flex align-center flex-direction mr-10 image-container"
       >
         <van-image
           fit="cover"
@@ -95,7 +95,7 @@ const calculateTime = () => {
   const now = new Date();
   elapsedTime.value = now - startDate;
 
-  // 计算天、小时、分钟、秒和毫秒
+  // 计算天、小时、分钟、秒
   const days = Math.floor(elapsedTime.value / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (elapsedTime.value % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -104,15 +104,11 @@ const calculateTime = () => {
     (elapsedTime.value % (1000 * 60 * 60)) / (1000 * 60)
   );
   const seconds = Math.floor((elapsedTime.value % (1000 * 60)) / 1000);
-  const milliseconds = elapsedTime.value % 1000;
 
-  formattedTime.value = `${days}天 ${hours
+  formattedTime.value = `${days}天 ${hours.toString().padStart(2, "0")}:${minutes
     .toString()
-    .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
-    .toString()
-    .padStart(2, "0")}.${milliseconds.toString().padStart(3, "0")}`;
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 };
-
 const startTimer = () => {
   if (!isRunning.value) {
     isRunning.value = true;
@@ -177,6 +173,12 @@ onUnmounted(() => {
 }
 .radius-5 {
   border-radius: 5px;
+}
+.image-container {
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
   
