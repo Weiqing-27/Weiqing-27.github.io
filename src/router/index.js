@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 
 // 页面路由
 const routes = [
-  { path: '/Home', component: Home },
+  { path: '/', component: Home },
   { path: '/calculator', component: () => import('../views/pages/Calculator.vue') },
 ]
 
