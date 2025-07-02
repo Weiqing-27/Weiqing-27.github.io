@@ -1,5 +1,5 @@
 <template>
-  <div>M</div>
+  <div>开发中~敬请期待</div>
 </template>
 
 <script>

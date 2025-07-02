@@ -1,4 +1,4 @@
-@for $i from 1 through 30 {
+@for $i from 1 through 100 {
     .text-#{$i} {
         font-size: $text-size-root * $i !important;
     }
