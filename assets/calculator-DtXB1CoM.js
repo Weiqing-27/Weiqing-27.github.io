@@ -1,0 +1,1 @@
+import{_ as c}from"./plugin-vueexport-helper-DlAUqK2U.js";import{Z as e,a2 as r}from"./index-CXwPzege.js";const o={};function t(a,n){return r(),e("div",null,"开发中~敬请期待")}const l=c(o,[["render",t]]);export{l as default};
