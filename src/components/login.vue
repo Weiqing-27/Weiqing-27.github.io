@@ -84,12 +84,15 @@ const fixedAccount = {
 
 const onSubmit = () => {
   loading.value = true;
-  
-  // 模拟网络请求延迟
   setTimeout(() => {
     if (username.value === fixedAccount.username && password.value === fixedAccount.password) {
+      // 登录成功时记录当前时间戳（毫秒）
+      const authData = {
+        isAuthenticated: true,
+        timestamp: Date.now()
+      };
+      localStorage.setItem('authData', JSON.stringify(authData));
       showToast('登录成功');
-      localStorage.setItem('isAuthenticated', 'true');
       router.push('/Home');
     } else {
       showToast('账号或密码错误');

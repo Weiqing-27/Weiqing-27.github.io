@@ -12,17 +12,18 @@
         />
       </div>
       <div class="flex flex-direction">
-        <div class="pb-10">和昕昕在一起的</div>
-        <div class="mt-10"><van-cell :value="formattedTime" /></div>
+        <div>和昕昕在一起的</div>
+        <div class="mt-10 color-red">{{ formattedTime }}</div>
       </div>
     </div>
     <div v-for="(row, rowIndex) in imageGrid" :key="rowIndex" class="flex justify-between ">
       <div 
         v-for="(item, colIndex) in row" 
         :key="item.id"
-        class="pa-10 mt-10 mb-30 shadow-box1 h-100 radius-10 w-50 flex align-center flex-direction mr-10 image-container"
+        class="pa-10 mt-10 mb-30 shadow-box1 radius-10 w-50 flex align-center flex-direction mr-10 image-container"
       >
         <van-image
+          lazy-load
           fit="cover"
           width="8rem"
           height="8rem"
@@ -56,14 +57,14 @@ import guangshagnchang from "@/assets/images/guangshagnchang.jpg";
 const imageList = ref([
 { id: 0, url: touxiang, title: "官宣！这张合照藏着心动密码", isRounded: true },
 { id: 1, url: touxiang, title: "第一束花：她脸红得比花瓣还甜", isRounded: false },
-{ id: 2, url: baimashi, title: "小美的独家镜头：被抓拍的傻笑瞬间", isRounded: false },
-{ id: 3, url: baimashi2, title: "小美的独家镜头：被抓拍的傻笑瞬间", isRounded: false },
+{ id: 2, url: baimashi, title: "小美的独家镜头：被抓拍的绝妙瞬间", isRounded: false },
+{ id: 3, url: baimashi2, title: "小美的独家镜头：在看什么", isRounded: false },
 { id: 4, url: baimashi3, title: "远游：导航说向左，她偏要往右拐", isRounded: false },
-{ id: 5, url: baimashi4, title: "见面：她偷偷把奶茶吸管换了方向", isRounded: false },
-{ id: 6, url: dianyinyuan, title: "彩蛋：电影院里踩了她3次脚", isRounded: false },
+{ id: 5, url: baimashi4, title: "见面：阳光、美丽的你", isRounded: false },
+{ id: 6, url: dianyinyuan, title: "第一次去看电影", isRounded: false },
 { id: 7, url: diyicidengshan, title: "爬山时她把“加油”喊成了“救命”", isRounded: false },
 { id: 8, url: gaoguai1, title: "她学小猫叫被路人听到", isRounded: false },
-{ id: 9, url: gaoguai2, title: "她紧张到把可乐倒在手上", isRounded: false },
+{ id: 9, url: gaoguai2, title: "谁更怪怪的", isRounded: false },
 { id: 10, url: guangshagnchang, title: "在广场跟着大妈跳了半支舞", isRounded: false }
 ]);
 
@@ -179,6 +180,9 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.color-red {
+  color: #ec4899;
 }
 </style>
   
